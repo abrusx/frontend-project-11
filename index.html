@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSS агрегатор</title>
+  </head>
+  <body>
+    <div class="container py-5">
+      <h1 class="mb-4">RSS агрегатор</h1>
+      <form id="rss-form" class="row g-3">
+        <div class="col-auto">
+          <label for="url-input" class="visually-hidden">Ссылка RSS</label>
+          <input
+            type="url"
+            id="url-input"
+            class="form-control"
+            placeholder="Введите URL RSS-потока"
+            required
+          />
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Добавить</button>
+        </div>
+      </form>
+      <div id="feedback" class="mt-3"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

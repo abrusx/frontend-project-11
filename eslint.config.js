@@ -1,17 +1,21 @@
 import js from '@eslint/js';
 
 export default [
+  {
+    ignores: ['dist/**', 'node_modules/**'],
+  },
   js.configs.recommended,
   {
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
-        ...globals.browser,
+        document: 'readonly',
+        console: 'readonly',
+        window: 'readonly',
+        fetch: 'readonly',
+        MutationObserver: 'readonly',
       },
-    },
-    rules: {
-      'no-console': 'off', //
     },
   },
 ];
